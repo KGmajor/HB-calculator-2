@@ -20,7 +20,18 @@ def calculator ():
     def divide_function():
         result = divide(int(tokens[1]), int(tokens[2]))
         print(result)
-
+    def square_function():
+        result = square(int(tokens[1]))
+        print(result)
+    def cube_function():
+        result = cube(int(tokens[1]))
+        print(result)
+    def power_function():
+        result = power(int(tokens[1]), int(tokens[2]))
+        print(result)
+    def mod_function():
+        result = mod(int(tokens[1]), int(tokens[2]))
+        print(result)
 
     while True:
         input_string = input('')
@@ -35,6 +46,14 @@ def calculator ():
             multiply_function()
         elif tokens[0] == '/':
             divide_function()
+        elif tokens[0] == 'square':
+            square_function()
+        elif tokens[0] == 'cube':
+            cube_function()
+        elif tokens[0] == 'power':
+            power_function()
+        elif tokens[0] == 'mod' or tokens[0] == '%':
+            mod_function()    
         
 calculator ()
 
