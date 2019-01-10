@@ -14,6 +14,13 @@ def calculator ():
     def subtraction_function():
         result = subtract(int(tokens[1]), int(tokens[2]))
         print(result)
+    def multiply_function():
+        result = multiply(int(tokens[1]), int(tokens[2]))
+        print(result)
+    def divide_function():
+        result = divide(int(tokens[1]), int(tokens[2]))
+        print(result)
+
 
     while True:
         input_string = input('')
@@ -24,6 +31,10 @@ def calculator ():
             plus_function()
         elif tokens[0] == '-':
             subtraction_function()
+        elif tokens[0] == '*':
+            multiply_function()
+        elif tokens[0] == '/':
+            divide_function()
         
 calculator ()
 
