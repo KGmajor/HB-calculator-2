@@ -7,19 +7,25 @@ calculator program yourself in this file.
 from arithmetic import *
 
 # Your code goes here
-def calculator_add ():
+def calculator ():
+    def plus_function():
+        result = add(int(tokens[1]), int(tokens[2]))
+        print(result)
+    def subtraction_function():
+        result = subtract(int(tokens[1]), int(tokens[2]))
+        print(result)
+
     while True:
         input_string = input('')
         tokens = input_string.split(" ")
         if tokens[0] == "q":
             return
-        def plus_function():
-            if tokens[0] == '+':
-                result = add(int(tokens[1]), int(tokens[2]))
-                print(result)
-        return plus_function()
-
-calculator_add()
+        elif tokens[0] == '+':
+            plus_function()
+        elif tokens[0] == '-':
+            subtraction_function()
+        
+calculator ()
 
 
 
